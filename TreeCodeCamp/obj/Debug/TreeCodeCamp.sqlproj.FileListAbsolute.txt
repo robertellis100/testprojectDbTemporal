@@ -1,0 +1,14 @@
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\TreeCodeCamp.sqlprojAssemblyReference.cache
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\bin\Debug\TreeCodeCamp.dacpac
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\bin\Debug\TreeCodeCamp.dll
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\bin\Debug\TreeCodeCamp.pdb
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\bin\Debug\AdventureWorks2016.dll
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\bin\Debug\AdventureWorks2016.pdb
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\bin\Debug\AdventureWorks2016.dacpac
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\Model.xml
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\refactor.xml
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\postdeploy.sql
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\predeploy.sql
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\TreeCodeCamp.sqlproj.CopyComplete
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\TreeCodeCamp.dll
+C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\TreeCodeCamp.pdb

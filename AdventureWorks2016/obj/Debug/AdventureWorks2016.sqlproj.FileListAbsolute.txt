@@ -1,0 +1,6 @@
+C:\Source\Presentations\TreeCodeCamp\AdventureWorks2016\obj\Debug\AdventureWorks2016.sqlprojAssemblyReference.cache
+C:\Source\Presentations\TreeCodeCamp\AdventureWorks2016\bin\Debug\AdventureWorks2016.dacpac
+C:\Source\Presentations\TreeCodeCamp\AdventureWorks2016\bin\Debug\AdventureWorks2016.dll
+C:\Source\Presentations\TreeCodeCamp\AdventureWorks2016\bin\Debug\AdventureWorks2016.pdb
+C:\Source\Presentations\TreeCodeCamp\AdventureWorks2016\obj\Debug\AdventureWorks2016.dll
+C:\Source\Presentations\TreeCodeCamp\AdventureWorks2016\obj\Debug\AdventureWorks2016.pdb

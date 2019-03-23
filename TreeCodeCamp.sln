@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TreeCodeCamp", "TreeCodeCamp\TreeCodeCamp.sqlproj", "{A464C9CD-8CC5-4BD9-86F9-0A0F244BBD67}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdventureWorks2016", "AdventureWorks2016\AdventureWorks2016.sqlproj", "{E93DFF64-1C8E-4AA0-8515-7C4742A5DBDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A464C9CD-8CC5-4BD9-86F9-0A0F244BBD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A464C9CD-8CC5-4BD9-86F9-0A0F244BBD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A464C9CD-8CC5-4BD9-86F9-0A0F244BBD67}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A464C9CD-8CC5-4BD9-86F9-0A0F244BBD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A464C9CD-8CC5-4BD9-86F9-0A0F244BBD67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A464C9CD-8CC5-4BD9-86F9-0A0F244BBD67}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E93DFF64-1C8E-4AA0-8515-7C4742A5DBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E93DFF64-1C8E-4AA0-8515-7C4742A5DBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E93DFF64-1C8E-4AA0-8515-7C4742A5DBDC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E93DFF64-1C8E-4AA0-8515-7C4742A5DBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E93DFF64-1C8E-4AA0-8515-7C4742A5DBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E93DFF64-1C8E-4AA0-8515-7C4742A5DBDC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C65E387D-D708-4F5F-B198-259E735D8F6A}
+	EndGlobalSection
+EndGlobal

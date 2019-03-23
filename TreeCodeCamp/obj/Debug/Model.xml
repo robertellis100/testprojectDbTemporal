@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="C:\SOURCE\PRESENTATIONS\TREECODECAMP\ADVENTUREWORKS2016\BIN\DEBUG\ADVENTUREWORKS2016.DACPAC" />
+			<Metadata Name="LogicalName" Value="AdventureWorks2016.dacpac" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="True" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="TreeCodeCamp.dll" />
+			<Metadata Name="FileName" Value="C:\SOURCE\PRESENTATIONS\TREECODECAMP\TREECODECAMP\OBJ\DEBUG\TREECODECAMP.DLL" />
+			<Metadata Name="AssemblyName" Value="TreeCodeCamp" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Source\Presentations\TreeCodeCamp\TreeCodeCamp\obj\Debug\TreeCodeCamp.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable">
+			<Metadata Name="AdventureWorks2016" Value="" />
+		</CustomData>
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[GETUTCDATE()]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LoadLog]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[LoadLog].[LoadDate]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(0)]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LoadLog]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[LoadLog].[RowsLoaded]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(0)]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LoadLog]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[LoadLog].[IsSuccess]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[GETUTCDATE()]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[ValidFrom]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA['9999-12-31 23:59:59.9999999']]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[ValidTo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LoadLog].[LoadLogId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LoadLog]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[EventRegistrationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[EventRegistration]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[EventRegistrationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="12" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[EventName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[FirstName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[LastName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[EmailAddress]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[RegisteredChildren]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[RegisteredYouth]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[RegisteredAdults]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[ValidFrom]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="GeneratedAlwaysType" Value="1" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="9" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration].[ValidTo]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="GeneratedAlwaysType" Value="2" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="10" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TemporalSystemVersioningHistoryTable">
+				<Entry>
+					<References Name="[dbo].[EventRegistration_History]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[dbo].[EventRegistration_All]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+	SELECT
+		  [EventRegistrationId]
+		, [EventName]																					
+		, [FirstName]																					
+		, [LastName]																					
+		, [EmailAddress]																				
+		, [RegisteredChildren]																			
+		, [RegisteredYouth]																				
+		, [RegisteredAdults]																			
+		, [ValidFrom]			AS	AllValidFrom																			
+		, [ValidTo]				AS	AllValidTo																		
+
+	FROM dbo.EventRegistration
+	]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[EventRegistrationId]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[EventRegistrationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[EventName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[EventName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[FirstName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[FirstName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[LastName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[LastName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[EmailAddress]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[EmailAddress]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[RegisteredChildren]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[RegisteredChildren]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[RegisteredYouth]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[RegisteredYouth]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[RegisteredAdults]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[RegisteredAdults]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[AllValidFrom]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[ValidFrom]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[EventRegistration_All].[AllValidTo]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[ValidTo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EventRegistrationId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EventName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EmailAddress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredChildren]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredYouth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredAdults]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[ValidFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[ValidTo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="503" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[EventRegistration_All]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[EventRegistration_History]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAutoGeneratedHistoryTable" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[EventRegistrationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[EventName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[FirstName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[LastName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[EmailAddress]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[RegisteredChildren]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[RegisteredYouth]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[RegisteredAdults]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[ValidFrom]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EventRegistration_History].[ValidTo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[EventRegistration_History].[ix_EventRegistration_History]">
+			<Property Name="IsClustered" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[EventRegistration_History].[ValidTo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[EventRegistration_History].[ValidFrom]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[EventRegistration_History]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[getAsOfState]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET NOCOUNT ON
+	
+	SELECT *
+	FROM dbo.EventRegistration
+	FOR SYSTEM_TIME AS OF @date
+		
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[getAsOfState].[@date]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA['2019-03-21 5:15:00.0000000']]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="197" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[getAsOfState]&#xD;&#xA;@date DATETIME2(7) = '2019-03-21 5:15:00.0000000'&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ins_EventRegistration]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[ 
+BEGIN
+	SET NOCOUNT ON
+
+	BEGIN TRY
+
+
+		DECLARE @EventName VARCHAR(50) = 'TreeCodeCamp';
+		DECLARE @Source VARCHAR(386) = 'AdventureWorks2016_Person_Person';
+		DECLARE @LoadType CHAR(1) = 'I';
+		DECLARE @PreviousHighWaterMark INT = (SELECT ISNULL(	
+										(
+											SELECT TOP 1 [HighWaterMark] 
+											FROM dbo.LoadLog
+											WHERE [Source] = @Source
+											AND [IsSuccess] = 1
+											ORDER BY [LoadDate] DESC
+										), 0)
+									);
+		DECLARE @LoadLogId INT;
+		DECLARE @RowsLoaded INT;
+		
+		---- This will create a random number between 0 and 20,5,1
+		DECLARE @LowerLimit INT = 0; ---- The lowest random number
+		DECLARE @UpperLimit INT = 1; ---- The highest random number
+		DECLARE @RandomChildren INT = ROUND(((@UpperLimit - @LowerLimit -1) * RAND() + @LowerLimit), 0)
+		DECLARE @RandomYouth INT = ROUND(((@UpperLimit - @LowerLimit -1) * RAND() + @LowerLimit), 0)
+		---- This will create a random number between 1 and 6,3
+		DECLARE @LowerAdultLimit INT = 1; ---- The lowest random number
+		DECLARE @UpperAdultLimit INT = 3; ---- The highest random number
+		DECLARE @RandomAdults INT = ROUND(((@UpperAdultLimit - @LowerAdultLimit -1) * RAND() + @LowerAdultLimit), 0)
+		;
+		DECLARE @NewHighWaterMark INT = @PreviousHighWaterMark + ROUND(((2 - @LowerAdultLimit -1) * RAND() + @LowerAdultLimit), 0);
+
+---------------------------------------------------------------------------------
+		INSERT INTO dbo.LoadLog
+		([Source],[LoadType],[PreviousHighWaterMark],[HighWaterMark])		
+		VALUES(
+			@Source
+			, @LoadType
+			, @PreviousHighWaterMark
+			, @PreviousHighWaterMark
+		);
+		SELECT @LoadLogId = @@IDENTITY
+	
+		BEGIN TRANSACTION
+
+			INSERT INTO dbo.EventRegistration
+			(
+				  EventName		
+				, [FirstName]
+				, [LastName]
+				, [EmailAddress]	
+				, RegisteredChildren	
+				, RegisteredYouth		
+				, RegisteredAdults		
+			)
+			SELECT 
+				  @EventName						AS EventName
+				, ISNULL(p.[FirstName],'')			AS FirstName
+				, ISNULL(p.[LastName],'')			AS LastName
+				, ISNULL(e.[EmailAddress],'')		AS [Email]
+				, @RandomChildren					AS RegisteredChildren
+				, @RandomYouth						AS RegisteredYouth
+				, @RandomAdults						AS RegisteredAdults
+			FROM [$(AdventureWorks2016)].[Person].[Person] p
+			JOIN [$(AdventureWorks2016)].[Person].[EmailAddress] e
+				ON p.[BusinessEntityID] = e.[BusinessEntityID]
+			WHERE p.[BusinessEntityID] > @PreviousHighWaterMark
+			AND p.[BusinessEntityID] <= @NewHighWaterMark
+			SELECT @RowsLoaded = @@ROWCOUNT
+
+			UPDATE dbo.LoadLog
+			SET HighWaterMark = @NewHighWaterMark
+			  , [RowsLoaded] = @RowsLoaded
+			  , [IsSuccess] = 1
+			WHERE LoadLogId = @LoadLogId
+
+		COMMIT
+
+---------------------------------------------------------------------------------
+
+	
+	END TRY
+ 
+	BEGIN CATCH
+ 
+		  IF @@TRANCOUNT > 0
+			ROLLBACK
+ 
+			DECLARE @ErrorMessage NVARCHAR(4000);
+			DECLARE @ErrorSeverity INT;
+			DECLARE @ErrorState INT;
+
+			SELECT @ErrorMessage = ERROR_MESSAGE(),
+					@ErrorSeverity = ERROR_SEVERITY(),
+					@ErrorState = ERROR_STATE();
+
+			-- Use RAISERROR inside the CATCH block to return 
+			-- error information about the original error that 
+			-- caused execution to jump to the CATCH block.
+			RAISERROR (@ErrorMessage, -- Message text.
+						@ErrorSeverity, -- Severity.
+						@ErrorState -- State.
+						);
+		RETURN;
+	END CATCH
+END; -- END Procedure]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[HighWaterMark]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[Source]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[IsSuccess]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[LoadDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[Source]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[LoadType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[PreviousHighWaterMark]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[HighWaterMark]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EventName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EmailAddress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredChildren]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredYouth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredAdults]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[LoadLog].[RowsLoaded]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[IsSuccess]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[LoadLogId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="3477" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[ins_EventRegistration]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ins_Registrations]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	DECLARE @date DATETIME2(7) = '2019-03-21 5:15:00.0000000'
+	DECLARE @iteration INT = 1
+
+		IF OBJECT_ID('tempdb..#PossibleDates') IS NOT NULL
+			DROP TABLE #PossibleDates;
+
+		IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES
+			   WHERE TABLE_NAME = N'Registrations')
+
+		SELECT DISTINCT
+			ValidFrom
+		INTO #PossibleDates
+		FROM dbo.EventRegistration
+		FOR SYSTEM_TIME ALL;
+
+		CREATE TABLE dbo.Registrations
+		(
+			RegistrationId		INT			IDENTITY(1,1)		NOT NULL,
+			PeopleType			VARCHAR(8)						NOT NULL,
+			RegisteredPeople	INT								NOT NULL,
+			ValidFrom			DATETIME2(7)					NOT NULL,
+			CONSTRAINT ci_Registrations_ValidFrom PRIMARY KEY CLUSTERED ([ValidFrom])
+		); 
+
+
+		WHILE EXISTS(SELECT TOP 1 * FROM #PossibleDates)
+		BEGIN
+			SET @date = (SELECT TOP 1 * FROM #PossibleDates)
+			WHILE @iteration <= 3
+			BEGIN
+				INSERT INTO dbo.Registrations
+				SELECT 
+					  CASE @iteration
+						WHEN 1
+							THEN 'Children'
+						WHEN 2
+							THEN 'Youth'
+						WHEN 3
+							THEN 'Adults'
+					  END						AS PeopleType
+					, CASE @iteration
+						WHEN 1
+							THEN SUM(RegisteredChildren)
+						WHEN 2
+							THEN SUM(RegisteredYouth)
+						WHEN 3
+							THEN SUM(RegisteredAdults)
+					  END						AS RegisteredPeople
+					, @date						AS ValidFrom
+				FROM dbo.EventRegistration
+				FOR SYSTEM_TIME AS OF @date
+				SET @iteration = @iteration + 1
+			END	
+
+			DELETE FROM #PossibleDates
+			WHERE ValidFrom = @date
+		END
+END --Procedure]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime2]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ins_Registrations].[#PossibleDates]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[ValidFrom]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime2]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredChildren]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredYouth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredAdults]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ins_Registrations].[#PossibleDates].[ValidFrom]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[ins_Registrations].[#PossibleDates]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[ins_Registrations].[#PossibleDates].[ValidFrom]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[EventRegistration].[ValidFrom]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1549" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[ins_Registrations]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[load_EventRegistration]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON
+	BEGIN TRY
+---------------------------------------------------------------------------------
+
+	EXEC dbo.ins_EventRegistration
+	EXEC dbo.upd_EventRegistration
+
+---------------------------------------------------------------------------------
+		
+	END TRY
+ 
+	BEGIN CATCH
+ 
+		  IF @@TRANCOUNT > 0
+			ROLLBACK
+ 
+			DECLARE @ErrorMessage NVARCHAR(4000);
+			DECLARE @ErrorSeverity INT;
+			DECLARE @ErrorState INT;
+
+			SELECT @ErrorMessage = ERROR_MESSAGE(),
+					@ErrorSeverity = ERROR_SEVERITY(),
+					@ErrorState = ERROR_STATE();
+
+			-- Use RAISERROR inside the CATCH block to return 
+			-- error information about the original error that 
+			-- caused execution to jump to the CATCH block.
+			RAISERROR (@ErrorMessage, -- Message text.
+						@ErrorSeverity, -- Severity.
+						@ErrorState -- State.
+						);
+		RETURN;
+	END CATCH
+END; -- END Procedure]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ins_EventRegistration]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[upd_EventRegistration]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="955" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[load_EventRegistration]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[LoadLog]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[LoadLogId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="11" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[Source]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="386" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[LoadType]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[PreviousHighWaterMark]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[HighWaterMark]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[LoadDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[RowsLoaded]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="7" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LoadLog].[IsSuccess]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="8" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[dbo].[PreviousValue]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[ 
+	SELECT *
+	FROM (
+		SELECT
+			  EventRegistrationId
+			, LAG([EventName],1,'')	OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])			AS PreviousEventName
+			, LAG([FirstName],1,'') OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])			AS PreviousFirstName
+			, LAG([LastName],1,'') OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])			AS PreviousLastName
+			, LAG([EmailAddress],1,'') OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])		AS PreviousEmailAddress
+			, LAG([RegisteredChildren],1,0)	OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])	AS PreviousRegisteredChildren
+			, LAG([RegisteredYouth],1,0) OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])		AS PreviousRegisteredYouth
+			, LAG([RegisteredAdults],1,0) OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])		AS PreviousRegisteredAdults
+			, LAG([ValidFrom],1,NULL) OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])			AS PreviousValidFrom
+			, LAG([ValidTo],1,NULL)	OVER(PARTITION BY [EventRegistrationId] ORDER BY [ValidFrom])			AS PreviousValidTo
+
+			, [EventName]																					AS NewEventName
+			, [FirstName]																					AS NewFirstName
+			, [LastName]																					AS NewLastName
+			, [EmailAddress]																				AS NewEmailAddress
+			, [RegisteredChildren]																			AS NewRegisteredChildren
+			, [RegisteredYouth]																				AS NewRegisteredYouth
+			, [RegisteredAdults]																			AS NewRegisteredAdults
+			, [ValidFrom]																					AS NewValidFrom
+			, [ValidTo]																						AS NewValidTo
+
+		FROM dbo.EventRegistration
+		FOR SYSTEM_TIME ALL
+	) x]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[EventRegistrationId]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[EventRegistrationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousEventName]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousFirstName]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousLastName]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousEmailAddress]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousRegisteredChildren]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousRegisteredYouth]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousRegisteredAdults]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousValidFrom]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[PreviousValidTo]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewEventName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[EventName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewFirstName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[FirstName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewLastName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[LastName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewEmailAddress]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[EmailAddress]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewRegisteredChildren]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[RegisteredChildren]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewRegisteredYouth]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[RegisteredYouth]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewRegisteredAdults]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[RegisteredAdults]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewValidFrom]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[ValidFrom]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[PreviousValue].[NewValidTo]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[EventRegistration].[ValidTo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EventRegistrationId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[ValidFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EventName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EmailAddress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredChildren]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredYouth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredAdults]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[ValidTo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1739" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[PreviousValue]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[upd_EventRegistration]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[ 
+BEGIN
+	SET NOCOUNT ON
+
+	BEGIN TRY
+
+
+		DECLARE @EventName VARCHAR(50) = 'TreeCodeCamp';
+		DECLARE @Source VARCHAR(386) = 'AdventureWorks2016_Person_Person';
+		DECLARE @LoadType CHAR(1) = 'U';
+		DECLARE @PreviousHighWaterMark INT = (SELECT ISNULL(	
+										(
+											SELECT TOP 1 [HighWaterMark] 
+											FROM dbo.LoadLog
+											WHERE [Source] = @Source
+											AND [IsSuccess] = 1
+											ORDER BY [LoadDate] DESC
+										), 0)
+									);
+		DECLARE @LoadLogId INT;
+		DECLARE @RowsLoaded INT;
+		
+		---- This will create a random number between 0 and 20,5
+		DECLARE @LowerLimit INT = 0; ---- The lowest random number
+		DECLARE @UpperLimit INT = 5; ---- The highest random number
+		DECLARE @RandomChildren INT = ROUND(((@UpperLimit - @LowerLimit -1) * RAND() + @LowerLimit), 0)
+		DECLARE @RandomYouth INT = ROUND(((@UpperLimit - @LowerLimit -1) * RAND() + @LowerLimit), 0)
+		---- This will create a random number between 1 and 6
+		DECLARE @LowerAdultLimit INT = 1; ---- The lowest random number
+		DECLARE @UpperAdultLimit INT = 6; ---- The highest random number
+		DECLARE @RandomAdults INT = ROUND(((@UpperAdultLimit - @LowerAdultLimit -1) * RAND() + @LowerAdultLimit), 0);
+		DECLARE @RandomRegistration INT = ROUND(((@PreviousHighWaterMark - @LowerAdultLimit -1) * RAND() + @LowerAdultLimit), 0);	
+		DECLARE @RandomPerson INT = ROUND(((@PreviousHighWaterMark - @LowerAdultLimit -1) * RAND() + @LowerAdultLimit), 0);	
+		
+		DECLARE @iteration INT	= 1;
+		DECLARE @NumberOfUpdates INT = ROUND(((@UpperAdultLimit - @LowerAdultLimit -1) * RAND() + @LowerAdultLimit), 0);		
+		
+	
+---------------------------------------------------------------------------------
+
+	
+		BEGIN TRANSACTION
+
+		WHILE @iteration <= @NumberOfUpdates
+		BEGIN
+			UPDATE dbo.EventRegistration		
+				SET [FirstName] = (SELECT ISNULL((SELECT [FirstName] FROM [$(AdventureWorks2016)].[Person].[Person] WHERE [BusinessEntityID] = @RandomPerson),'P'))
+			    , RegisteredChildren = @RandomChildren
+				, RegisteredYouth = @RandomYouth	
+				, RegisteredAdults = @RandomAdults
+			WHERE [EventRegistrationId] = @RandomRegistration
+
+			SET @iteration = @iteration + 1;
+		END
+
+		COMMIT
+
+---------------------------------------------------------------------------------
+
+	
+	END TRY
+ 
+	BEGIN CATCH
+ 
+		  IF @@TRANCOUNT > 0
+			ROLLBACK
+ 
+			DECLARE @ErrorMessage NVARCHAR(4000);
+			DECLARE @ErrorSeverity INT;
+			DECLARE @ErrorState INT;
+
+			SELECT @ErrorMessage = ERROR_MESSAGE(),
+					@ErrorSeverity = ERROR_SEVERITY(),
+					@ErrorState = ERROR_STATE();
+
+			-- Use RAISERROR inside the CATCH block to return 
+			-- error information about the original error that 
+			-- caused execution to jump to the CATCH block.
+			RAISERROR (@ErrorMessage, -- Message text.
+						@ErrorSeverity, -- Severity.
+						@ErrorState -- State.
+						);
+		RETURN;
+	END CATCH
+END; -- END Procedure]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[HighWaterMark]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[Source]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[IsSuccess]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LoadLog].[LoadDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[FirstName]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[FirstName]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredChildren]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredYouth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[RegisteredAdults]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EventRegistration].[EventRegistrationId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="2982" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[upd_EventRegistration]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

@@ -1,0 +1,12 @@
+﻿CREATE PROCEDURE [dbo].[getAsOfState]
+@date DATETIME2(7) = '2019-03-21 5:15:00.0000000'
+AS
+BEGIN
+SET NOCOUNT ON
+	
+	SELECT *
+	FROM dbo.EventRegistration
+	FOR SYSTEM_TIME AS OF @date
+		
+END
+
